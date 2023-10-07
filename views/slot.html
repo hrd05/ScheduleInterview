@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slots available</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Available Slots</h1>
+        <div class="text-center">
+            <input type="button" id="btn1" value="2:30 pm" onclick="showForm('2:30 pm')">
+            <input type="button" id="btn2" value="3:00 pm" onclick="showForm('3:00 pm')">
+            <input type="button" id="btn3" value="3:30 pm" onclick="showForm('3:30 pm')">
+            <input type="button" id="btn4" value="4:30 pm" onclick="showForm('4:30 pm')">
+        </div>
+    </div>
+    <div class="container-fluid">
+        <form id="bookingForm" class="text-center">
+            <h2 id="slotInfo">Booking for Slot</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <input type="button" value="Book" onclick="showUserDetail()">
+        </form>
+    </div>
+
+    <div id="userDetails" class="container text-center" style="display: none;">
+        <h2>Meeting Details</h2>
+        <p id="userMessage"></p>
+    </div>
+
+    <script src="/public/javascript/main.js"></script>
+</body>
+
+</html>
